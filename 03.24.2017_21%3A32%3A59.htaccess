@@ -1,5 +1,0 @@
-#default index page
-DirectoryIndex "index.html"
-
-#Custom Error Documents
-ErrorDocument 404	404.html

@@ -1,5 +1,0 @@
-#default index page
-DirectoryIndex "index.html"
-
-#Custom Error Documents
-ErrorDocument 404	www.sector8.xyz/404.html
