@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>SYS_HUB</title>
+<script type="text/javascript" src="libopenmpt.js"></script>
+<script type="text/javascript" src="chiptune2.js"></script>
+<script type="text/javascript">
+      var player;
+
+      function init() {
+        if (player == undefined) {
+          player = new ChiptuneJsPlayer(new ChiptuneJsConfig(-1));
+        }
+        else {
+          player.stop();
+        }
+      }
+
+      function loadURL(path) {
+        init();
+        player.load(path, function(buffer) {
+          player.play(buffer);
+        });
+      }
+
+      function loadFile(file) {
+        init();
+        player.load(file, function(buffer) {
+          player.play(buffer);
+        });
+      }
+
+      var fileaccess = document.querySelector('*');
+      fileaccess.ondrop = function(e) {
+        e.preventDefault();
+        var file = e.dataTransfer.files[0];
+        init();
+
+        player.load(file, function(buffer) {
+          player.play(buffer);
+        });
+      }
+
+      fileaccess.ondragenter = function(e){e.preventDefault();}
+      fileaccess.ondragover = function(e){e.preventDefault();}
+	  loadURL("audio/Battle08.it")
+	  //shamelessly stolen from the index.html of chiptune2.js's demo page, with lots of snippage
+	  //still retains the drag and drop functionality of the demo which may be a plus
+</script>
+<body>
+no 
+thank you
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<http>
+<title>Union Aerospace Corporation</title>
+<p><span style="font-family: 'comic sans ms', sans-serif; color: #69b715;">&gt;doom</span></p>
+<p><span style="font-family: 'comic sans ms', sans-serif; color: #69b715;">&gt;E1M1</span></p>
+<head>
+<!--which one do you like the most?-->
+	<script src="howler.min.js"></script>
+	<script>
+document.addEventListener("DOMContentLoaded", function(event) { 
+			var duke = new Howl({
+				src: ['/audio/DK3D.ogg'],
+				loop: true,				
+				preload: true,
+				volume: 0.5
+			});
+
+			var opl3 = new Howl({
+				src: ['/audio/OPL3.ogg'],
+				volume: 0.5,				
+				preload: true,
+				loop: true
+			});					
+			var doomopl = new Howl({
+			src: ['/audio/doomopl.ogg'],
+			volume: 0.5,
+			preload: true,
+			loop: true
+			});
+
+				document.getElementById('btn1').onclick=function(){duke.play()}
+				document.getElementById('btn2').onclick=function(){opl3.play()}
+				document.getElementById('btn3').onclick=function(){doomopl.play()}
+				document.getElementById('btn4').onclick=function(){duke.play(); opl3.play(); doomopl.play();}
+				document.getElementById('btn5').onclick=function(){duke.stop(); opl3.stop(); doomopl.stop();}
+});
+	</script>
+</head>
+<body>
+<body style="background-color:black;">
+<div style=""></div>
+<img src="skel1.gif" alt="doomy doom"><br><br>
+<button id="btn1">Duke Nukem 3D</button><br><br>
+<button id="btn2">OPL3W</button><br><br>
+<button id="btn3">Doom 1 OPL</button><br><br>
+<button id="btn4">All Three</button><br><br>
+<button id="btn5">STFU</button><br><br>
+<!--tfw you will never bone a baron of hell-->
+</body>
+</http>			

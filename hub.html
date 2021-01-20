@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>SYS_HUB</title>
+<script type="text/javascript" src="libopenmpt.js"></script>
+<script type="text/javascript" src="chiptune2.js"></script>
+<script type="text/javascript">
+      var player;
+
+ function init() {
+        if (player == undefined) {
+          player = new ChiptuneJsPlayer(new ChiptuneJsConfig(-1));
+        }
+        else {
+          player.stop();
+        }
+      }
+
+      function loadURL(path) {
+        init();
+        player.load(path, function(buffer) {
+          player.play(buffer);
+        });
+      }
+
+      function loadFile(file) {
+        init();
+        player.load(file, function(buffer) {
+          player.play(buffer);
+        });
+      }
+
+	  loadURL("audio/Battle08.it")
+</script>
+<body>
+no 
+thank you
+
+</body>
+</html>
